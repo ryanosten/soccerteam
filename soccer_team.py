@@ -18,7 +18,7 @@ if __name__ == "__main__":
 		#split the team members into equal groups, with even experience attrs
 		#write the groups to a file
 		def createTeams(players, per_team):
-			file = open("teams.txt", "a")
-			file.write('some shit')
+			with open("teams.txt", "a") as file:
+				file.write('some shit')
 
 	createTeams('a', 3)
