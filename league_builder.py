@@ -1,6 +1,7 @@
 import csv
 
 if __name__ == "__main__":
+	#open CSV
 	with open("soccer_players.csv") as csvfile:
 		num_teams = 3
 
@@ -35,18 +36,18 @@ if __name__ == "__main__":
 
 		def assign_players():
 			for player in exp_players:
-				if (exp_players.index(player) + 4) % num_teams == 2:
+				if (exp_players.index(player) + num_teams + 1) % num_teams == 2:
 					sharks.append(player)
-				elif (exp_players.index(player) + 4) % num_teams == 1:
+				elif (exp_players.index(player) + num_teams + 1) % num_teams == 1:
 					dragons.append(player)
-				elif (exp_players.index(player) + 4) % num_teams == 0:
+				elif (exp_players.index(player) + num_teams + 1) % num_teams == 0:
 					raptors.append(player)
 			for player in non_exp_players:
-				if (non_exp_players.index(player) + 4) % num_teams == 2:
+				if (non_exp_players.index(player) + num_teams + 1) % num_teams == 2:
 					sharks.append(player)
-				elif (non_exp_players.index(player) + 4) % num_teams == 1:
+				elif (non_exp_players.index(player) + num_teams + 1) % num_teams == 1:
 					dragons.append(player)
-				elif (non_exp_players.index(player) + 4) % num_teams == 0:
+				elif (non_exp_players.index(player) + num_teams + 1) % num_teams == 0:
 					raptors.append(player)
 
 		#write the teams to a file
